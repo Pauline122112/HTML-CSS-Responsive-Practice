@@ -260,3 +260,75 @@ margin-right: 10%;
     text-align: right;
     margin-right: 10%;
 }
+
+/* RESPONSIVE STYLES */
+/* max-width scales down -desktop first
+min-width scales up- mobile first */
+/* WE ARE STARTING BIG AND SCALING DOWN */
+
+@media(max-width: 800px){
+    /* if the screen size is 800px or smaller apply these styles */
+}
+
+/* Why do we use px inside of max-width: our screen size is fixed */
+
+@media(max-width: 500px){
+    /* if the screen size is 500px or smaller apply these styles */
+    nav{
+        flex-direction: column;
+    }
+    /*display: flex is already working on .nav so no point repeating*/
+    .links{
+        width: 80%;
+    }
+    #about{
+        background-image: none;
+        background-color: #e5e6e8;
+        justify-content: center;
+        height: auto; /*let it be as big as the stuff inside of it*/
+    }
+    #about .txt{
+        margin:0;
+        width: 80%;
+    }
+
+    /* shop section styles */
+
+    .container{
+        justify-content: center;
+    }
+
+    .bgimg{
+        height: 60vh;
+    }
+    .shoptxt, .bgimg{
+        width: 90%;
+    }
+
+    /* changing order of images */
+    .one{
+        order:0;
+    }
+    .two{
+        order:1;
+    }
+    .three{
+        order:2;
+    }
+    .four{
+        order:3;
+    }
+    .five{
+        order:4;
+    }
+
+    .six{
+        order:5;
+    }
+
+
+}
+
+
+
+/* use inspect, toggle device toolbar, shows 500px or 800px */
