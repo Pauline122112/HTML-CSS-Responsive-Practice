@@ -42,3 +42,221 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+*{
+    box-sizing: border-box; /*It makes css respect the width of the box, apply padding or border within the width it's been given not in addition to it*/
+    max-width: 100%;/*You can never be bigger then your parents: Makes it so that elements can never be bigger than their parents, stops the horizontal scroll bar*/
+    padding:0;
+    margin: 0;
+    border: 1px solid grey;
+}
+/* plant image doesn't scale of the page, if you really want to make sure those things are talking to each other, you can change the body background color */
+
+/* This is to test if they are talking to each other 
+body{
+    background-color: peachpuff;
+}
+*/
+/* GENERAL SYLES */
+html{
+    font-size: 62.5%; /*Percentage is a scalable unit- default browser font-size is 16px, this makes it so that 1rem=10px. Also gives the user control over bumping up or down the fon size because % is a scalable unit of measurement*/
+}
+
+body{
+    font-size: 1.6rem; /*setting the font size back to 16px*/
+    line-height: 1.8; /*no unit of measurement, it take the font size and multiplies it by this number to add space between lines*/
+    color: #4f4f4f;
+    background-color: #FBFFFB;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+a{
+    font-family: 'Source Sans Pro', sans-serif;
+    text-decoration: none;
+    color: #266035;
+}
+
+h1, h2, h3{
+    font-family: 'Oxygen', sans-serif;
+    color:#266035;
+    text-align: center;
+}
+
+h1{
+    color: #FBFFFB;
+    font-size:5rem;
+}
+
+h2{
+    font-size: 3.5rem;
+}
+h3{
+    font-size: 2.5rem;
+}
+/* all the buttons because don't want to have to rewrite over and over again */
+button{
+    background-color: #266035;
+    padding: 3% 4%;
+    font-size: 1.8rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #FBFFFB;
+}
+
+section{
+    padding: 4% 0;
+}
+
+/* Header Section Styles */
+nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999; /*will make sure everything scrolls behind the nav*/
+    background-color: rgba(255, 255, 255, 0.733);/*gives nav opacity*/
+}
+/* logo is centered in box */
+.logo{
+    width:20%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.logo img{
+    width:70%;
+}
+
+/* more specific then to nav because it's only making sure the links are important */
+.links{
+    width:50%;
+    display:flex; /* space out evenly*/
+    justify-content: space-evenly;
+}
+
+/* Top Section Styles */
+#top{
+    height: 90vh;
+    background-image:url('../images/header.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#top button{
+    background-color: #FBFFFB;
+    border: 2px solid #266035;
+    color: #266035;
+    margin-top: 5%;
+    transition: 2s; /*transition doesn't belong on the hover, it belongs on the element itself, if you want it to take effect*/
+}
+
+#top button:hover{
+    color: #FBFFFB;
+    background-color: #266035;
+}
+
+/* About section styles */
+#about{
+    height: 80vh;
+    background-image: url('../images/about-img.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#about .txt{
+width: 25%;
+margin-right: 10%;
+
+}
+/* shop section styles */
+.container{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.shoptxt, .bgimg{
+    width: 50%; /*should wrap to the next line--look at flex wrap in container*/
+}
+
+
+.shoptxt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6% 4%;
+    text-align: center;
+}
+
+.shoptxt div{
+    width: 65%;
+}
+.shoptxt div button{
+    margin-top: 5%;
+}
+
+.bgimg{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.succulants{
+    background-image:url('../images/succulants.jpg');
+
+}
+
+.cacti{
+    background-image:url('../images/cacti.jpg')
+}
+
+.tropicals{
+    background-image:url('../images/tropicals.jpg');
+}
+
+/* Footer Section Styles */
+
+#contact{
+    display: flex;
+    flex-wrap: wrap;
+    color:#fff;
+    background-color: #266035;
+
+}
+
+#contact a, #contact h3{
+    color:#fff;
+    text-align: left;
+}
+
+#contact h2{
+    width: 100%;
+    color:#fff;
+}
+
+.left, .right{
+    width:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left div, .right img{
+    width: 60%;
+}
+
+.bottom{
+    width: 100%;
+    text-align: right;
+    margin-right: 10%;
+}
